@@ -10,10 +10,10 @@ export class GetWeatherService {
   constructor(private http:HttpClient) { }
 
   getWeatherBasedOnZip(zipCode:string){
-    return this.http.get(`http://api.weatherapi.com/v1/forecast.json?key=bf39a5094ac44c73a5e203038230603&q=${zipCode}&aqi=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/forecast.json?key=bf39a5094ac44c73a5e203038230603&q=${zipCode}&aqi=no`)
   }
   getHistoricalWeatherBasedOnZip(zipCode:string,date:string) {
-    return this.http.get(`http://api.weatherapi.com/v1/history.json?key=bf39a5094ac44c73a5e203038230603&q=${zipCode}&dt=${date}`)
+    return this.http.get(`https://api.weatherapi.com/v1/history.json?key=bf39a5094ac44c73a5e203038230603&q=${zipCode}&dt=${date}`)
 
   }
 }
